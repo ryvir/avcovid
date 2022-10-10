@@ -21,7 +21,7 @@ ref.getDownloadURL().then(url => {
     .then(data => {
         stats = JSON.parse(data);
         length = 3 * stats.length + 22;
-        document.querySelector("#key").innerHTML = "<span id=\"new-cases-key\"></span> New cases&nbsp;&nbsp;&nbsp; <span id=\"average-key\"></span> 5-day average"
+        document.querySelector("#key").innerHTML = "<span id=\"new-cases-key\"></span> New cases &nbsp;&nbsp;&nbsp; <span id=\"average-key\"></span> 5-day average <br> <small>0* denotes that cases were not reported.</small>"
         display();
     });
 });
@@ -63,7 +63,6 @@ function display() {
     infoContainer = document.querySelector("#info-container");
 
     document.querySelector("#footer").style.display = "";
-    document.querySelector("#asterisk").style.display = "";
     
     var totalCount = 0;
     var prevDot = [0, 0];
@@ -155,7 +154,7 @@ function display() {
     // omicron.setAttribute("opacity", ".1");
     // barContainer.appendChild(omicron);
 
-    document.querySelector("#total").innerText = `\nTotal: ${totalCount} cases`;
+    document.querySelector("#total").innerText = `Total cases - ${totalCount}`;
 }
 
 function mouseMove(e) {

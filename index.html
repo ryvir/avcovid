@@ -13,11 +13,9 @@
     <title>AVHS COVID Statistics</title>
 </head>
 <body>
-    <h1>AVHS COVID-19 Statistics</h1>
-    <h2>Daily New Cases</h2>
-    <p id="key">Retrieving data...</p>
+    <h2>AVHS COVID-19 Statistics</h2>
+    <h3>Daily New Cases</h3>
     <svg id="container" style="display: none;" pointer-events="all">
-    </g>
     <g id="info-container" style="display: none;">
         <line y1="0" y2="400" id="info-line" stroke="black" stroke-dasharray="1,1"></line>
         <rect width="116" height="70" y="10" style="fill:white;stroke-width:1;stroke:black" id="info-box"></rect>
@@ -39,8 +37,8 @@
     <g id="x-axis"></g>
     <g id="bars">
     </svg>
+    <p id="key">Retrieving data...</p>
     <div id="total"></div>
-    <p id="asterisk" style="font-size: small; display: none;">0* denotes that cases were not reported.<br><br></p>
     <p id="footer" style="display: none;"></p>
 </body>
 </html>
