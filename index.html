@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script defer src="script.js"></script>
+    <title>AVHS COVID Statistics</title>
+</head>
+<body>
+    <h1>AVHS COVID-19 Statistics</h1>
+    <h2>Daily New Cases</h2>
+    <p id="key">Retrieving data...</p>
+    <svg id="container" style="display: none;" pointer-events="all">
+    </g>
+    <g id="info-container" style="display: none;">
+        <line y1="0" y2="400" id="info-line" stroke="black" stroke-dasharray="1,1"></line>
+        <rect width="116" height="70" y="10" style="fill:white;stroke-width:1;stroke:black" id="info-box"></rect>
+        <text text-anchor="middle" y="30" class="info" font-weight="bold"></text>
+        <text text-anchor="middle" y="50" class="info"></text>
+        <text text-anchor="middle" y="70" class="info"></text>
+    </g>        
+    <g id="y-axis">
+        <text x="5" y="15">20</text>
+        <text x="5" y="115">15</text>
+        <text x="5" y="215">10</text>
+        <text x="5" y="315">5</text>
+        <line x1="5" y1="1" x2="2000" y2="1" stroke="gray"></line>
+        <line x1="5" y1="100" x2="2000" y2="100" stroke="gray"></line>
+        <line x1="5" y1="200" x2="2000" y2="200" stroke="gray"></line>
+        <line x1="5" y1="300" x2="2000" y2="300" stroke="gray"></line>
+        <line x1="5" y1="400" x2="2000" y2="400" stroke="gray"></line>
+    </g>
+    <g id="x-axis"></g>
+    <g id="bars">
+    </svg>
+    <div id="total"></div>
+    <p id="asterisk" style="font-size: small; display: none;">0* denotes that cases were not reported.<br><br></p>
+    <p id="footer" style="display: none;"></p>
+</body>
+</html>
