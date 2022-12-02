@@ -13,6 +13,14 @@ firebase.initializeApp({
     measurementId: "G-6F46MJ1KCB"
 });
 
+var modal = document.getElementById("modal");
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 const storage = firebase.storage();
 const ref = storage.ref('stats.json');
 ref.getDownloadURL().then(url => {
